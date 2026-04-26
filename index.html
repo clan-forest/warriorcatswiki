@@ -1,269 +1,378 @@
 <!DOCTYPE html>
-<!-- saved from url=(0078)file:///C:/Users/otjen/OneDrive/Desktop/new%20warrior%20cats/warrior-cats.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Warrior Cats Info</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Forest Clans Guide</title>
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
       background: #0f172a;
       color: white;
-      margin: 0;
     }
 
     header {
-      background: #1e293b;
-      padding: 30px;
+      min-height: 75vh;
+      background:
+        linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.95)),
+        url("https://images.unsplash.com/photo-1448375240586-882707db888b");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      font-size: 55px;
+      margin-bottom: 10px;
+      color: #facc15;
+    }
+
+    header p {
+      font-size: 20px;
+      max-width: 700px;
+      margin: auto;
+      color: #e2e8f0;
     }
 
     nav {
-      background: #334155;
-      padding: 12px;
-      text-align: center;
       position: sticky;
       top: 0;
+      z-index: 10;
+      background: #020617;
+      padding: 15px;
+      text-align: center;
+      border-bottom: 1px solid #334155;
     }
 
     nav a {
       color: white;
-      margin: 10px;
       text-decoration: none;
+      margin: 0 12px;
       font-weight: bold;
     }
 
+    nav a:hover {
+      color: #facc15;
+    }
+
     section {
-      padding: 25px;
-      max-width: 900px;
+      max-width: 1100px;
       margin: auto;
+      padding: 50px 20px;
+    }
+
+    h2 {
+      font-size: 36px;
+      color: #facc15;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
     }
 
     .card {
       background: #1e293b;
-      padding: 20px;
-      margin: 15px 0;
-      border-radius: 12px;
-      border-left: 5px solid #facc15;
+      padding: 22px;
+      border-radius: 18px;
+      border: 1px solid #334155;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      transition: transform 0.2s, border 0.2s;
     }
 
-    h2 {
-      color: #facc15;
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #facc15;
     }
 
-    h3 {
+    .card h3 {
       color: #93c5fd;
+      margin-top: 0;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #334155;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      color: #cbd5e1;
+      margin-bottom: 10px;
+    }
+
+    .hero-button {
+      display: inline-block;
+      margin-top: 25px;
+      background: #facc15;
+      color: #0f172a;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .search-box {
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto 30px;
+      display: block;
+      padding: 14px;
+      border-radius: 12px;
+      border: none;
+      font-size: 16px;
     }
 
     footer {
+      background: #020617;
+      color: #94a3b8;
       text-align: center;
-      padding: 20px;
-      background: #1e293b;
-      color: #cbd5e1;
+      padding: 25px;
+      border-top: 1px solid #334155;
     }
   </style>
-<style type="text/css" id="operaUserStyle"></style></head>
+</head>
+
 <body>
 
 <header>
-  <h1>Warrior Cats Info</h1>
-  <p>A fan-made guide to Clans, ranks, characters, and books</p>
+  <div>
+    <h1>Forest Clans Guide</h1>
+    <p>The ultimate fan-made guide for clans, characters, ranks, lore, book arcs, and warrior traditions.</p>
+    <a class="hero-button" href="#clans">Explore the Clans</a>
+  </div>
 </header>
 
 <nav>
-  <a href="file:///C:/Users/otjen/OneDrive/Desktop/new%20warrior%20cats/warrior-cats.html#clans">Clans</a>
-  <a href="file:///C:/Users/otjen/OneDrive/Desktop/new%20warrior%20cats/warrior-cats.html#ranks">Ranks</a>
-  <a href="file:///C:/Users/otjen/OneDrive/Desktop/new%20warrior%20cats/warrior-cats.html#characters">Characters</a>
-  <a href="file:///C:/Users/otjen/OneDrive/Desktop/new%20warrior%20cats/warrior-cats.html#books">Books</a>
-  <a href="file:///C:/Users/otjen/OneDrive/Desktop/new%20warrior%20cats/warrior-cats.html#terms">Terms</a>
+  <a href="#clans">Clans</a>
+  <a href="#characters">Characters</a>
+  <a href="#ranks">Ranks</a>
+  <a href="#books">Books</a>
+  <a href="#terms">Terms</a>
 </nav>
 
 <section id="clans">
   <h2>The Clans</h2>
 
-  <div class="card">
-    <h3>ThunderClan</h3>
-    <p>ThunderClan cats live in the forest and are known for bravery, loyalty, and strong warrior hearts. They are often seen as noble and protective.</p>
-  </div>
+  <div class="grid">
+    <div class="card">
+      <span class="tag">Forest</span>
+      <h3>ThunderClan</h3>
+      <p>Known for courage, loyalty, and strong warrior hearts. ThunderClan cats often protect what they believe is right.</p>
+    </div>
 
-  <div class="card">
-    <h3>RiverClan</h3>
-    <p>RiverClan cats live near water. They are excellent swimmers and are skilled at catching fish. They are proud and graceful.</p>
-  </div>
+    <div class="card">
+      <span class="tag">River</span>
+      <h3>RiverClan</h3>
+      <p>Graceful swimmers and skilled fishers. RiverClan cats are proud, elegant, and connected to water.</p>
+    </div>
 
-  <div class="card">
-    <h3>WindClan</h3>
-    <p>WindClan cats live on the moor. They are fast runners, slim, and tough. They are known for catching rabbits.</p>
-  </div>
+    <div class="card">
+      <span class="tag">Moor</span>
+      <h3>WindClan</h3>
+      <p>Fast, lean cats who live on open moorland. WindClan is known for speed, endurance, and survival.</p>
+    </div>
 
-  <div class="card">
-    <h3>ShadowClan</h3>
-    <p>ShadowClan cats are clever, secretive, and strong. They often live in darker, marshy areas and are sometimes misunderstood by other Clans.</p>
-  </div>
+    <div class="card">
+      <span class="tag">Marsh</span>
+      <h3>ShadowClan</h3>
+      <p>Clever, tough, and secretive. ShadowClan cats are often misunderstood but fiercely loyal to their own.</p>
+    </div>
 
-  <div class="card">
-    <h3>SkyClan</h3>
-    <p>SkyClan cats are great jumpers and climbers. They were separated from the other Clans for a long time before returning.</p>
-  </div>
+    <div class="card">
+      <span class="tag">Sky</span>
+      <h3>SkyClan</h3>
+      <p>Powerful jumpers and climbers. SkyClan has a unique history and a strong connection to trees and heights.</p>
+    </div>
 
-  <div class="card">
-    <h3>StarClan</h3>
-    <p>StarClan is where many warrior ancestors go after death. They guide the living cats through dreams, signs, and prophecies.</p>
-  </div>
-
-  <div class="card">
-    <h3>The Dark Forest</h3>
-    <p>The Dark Forest is where some evil or dishonorable cats go after death. It is a dangerous place full of shadows and fear.</p>
-  </div>
-</section>
-
-<section id="ranks">
-  <h2>Clan Ranks</h2>
-
-  <div class="card">
-    <h3>Leader</h3>
-    <p>The leader controls the Clan and makes major decisions. Leaders usually receive nine lives from StarClan.</p>
-  </div>
-
-  <div class="card">
-    <h3>Deputy</h3>
-    <p>The deputy is second-in-command. They organize patrols and become leader if the current leader dies or retires.</p>
-  </div>
-
-  <div class="card">
-    <h3>Medicine Cat</h3>
-    <p>The medicine cat heals injuries and sickness. They also speak with StarClan and interpret signs.</p>
-  </div>
-
-  <div class="card">
-    <h3>Warrior</h3>
-    <p>Warriors protect the Clan, hunt for food, train apprentices, and follow the warrior code.</p>
-  </div>
-
-  <div class="card">
-    <h3>Apprentice</h3>
-    <p>Apprentices are young cats training to become warriors or medicine cats. Their names usually end in “paw.”</p>
-  </div>
-
-  <div class="card">
-    <h3>Kit</h3>
-    <p>Kits are baby cats. Their names usually end in “kit.” They stay in the nursery until they become apprentices.</p>
-  </div>
-
-  <div class="card">
-    <h3>Elder</h3>
-    <p>Elders are retired Clan cats. They are respected for their wisdom and stories.</p>
+    <div class="card">
+      <span class="tag">Ancestors</span>
+      <h3>StarClan</h3>
+      <p>The spiritual ancestors of the warrior cats. They guide living cats through dreams, signs, and prophecies.</p>
+    </div>
   </div>
 </section>
 
 <section id="characters">
   <h2>Important Characters</h2>
 
-  <div class="card">
-    <h3>Firestar</h3>
-    <p>Firestar began as a kittypet named Rusty. He joined ThunderClan, became Firepaw, then Fireheart, and eventually Firestar.</p>
-  </div>
+  <input class="search-box" type="text" id="searchInput" placeholder="Search characters..." onkeyup="searchCards()" />
 
-  <div class="card">
-    <h3>Bluestar</h3>
-    <p>Bluestar was the ThunderClan leader who allowed Rusty to join the Clan. She was wise, powerful, and tragic.</p>
-  </div>
+  <div class="grid" id="characterGrid">
+    <div class="card character-card">
+      <span class="tag">ThunderClan</span>
+      <h3>Firestar</h3>
+      <p>A former kittypet who became one of the greatest ThunderClan leaders.</p>
+    </div>
 
-  <div class="card">
-    <h3>Graystripe</h3>
-    <p>Graystripe is Firestar’s best friend. He is funny, loyal, and sometimes struggles between love and loyalty.</p>
-  </div>
+    <div class="card character-card">
+      <span class="tag">ThunderClan</span>
+      <h3>Bluestar</h3>
+      <p>The ThunderClan leader who brought Firestar into the Clan and shaped his destiny.</p>
+    </div>
 
-  <div class="card">
-    <h3>Ravenpaw</h3>
-    <p>Ravenpaw was a ThunderClan apprentice who knew dangerous secrets. He later found a safer life away from the Clans.</p>
-  </div>
+    <div class="card character-card">
+      <span class="tag">ThunderClan</span>
+      <h3>Graystripe</h3>
+      <p>Firestar’s best friend, known for humor, loyalty, and emotional choices.</p>
+    </div>
 
-  <div class="card">
-    <h3>Tigerstar</h3>
-    <p>Tigerstar is one of the most famous villains in Warrior Cats. He was ambitious, dangerous, and power-hungry.</p>
-  </div>
+    <div class="card character-card">
+      <span class="tag">ShadowClan</span>
+      <h3>Tigerstar</h3>
+      <p>A dangerous and ambitious warrior remembered as one of the most famous villains.</p>
+    </div>
 
-  <div class="card">
-    <h3>Sandstorm</h3>
-    <p>Sandstorm started out doubting Firestar, but later became one of his closest companions and a strong warrior.</p>
-  </div>
+    <div class="card character-card">
+      <span class="tag">Medicine Cat</span>
+      <h3>Yellowfang</h3>
+      <p>A grumpy but caring medicine cat with a tragic past and strong heart.</p>
+    </div>
 
-  <div class="card">
-    <h3>Yellowfang</h3>
-    <p>Yellowfang was a grumpy but caring medicine cat. She became very important to ThunderClan.</p>
+    <div class="card character-card">
+      <span class="tag">ThunderClan</span>
+      <h3>Sandstorm</h3>
+      <p>A skilled warrior who became one of Firestar’s closest companions.</p>
+    </div>
+  </div>
+</section>
+
+<section id="ranks">
+  <h2>Clan Ranks</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Leader</h3>
+      <p>Leads the Clan and usually receives nine lives from StarClan.</p>
+    </div>
+
+    <div class="card">
+      <h3>Deputy</h3>
+      <p>Second-in-command. Organizes patrols and becomes leader when needed.</p>
+    </div>
+
+    <div class="card">
+      <h3>Medicine Cat</h3>
+      <p>Heals injuries, treats sickness, and communicates with StarClan.</p>
+    </div>
+
+    <div class="card">
+      <h3>Warrior</h3>
+      <p>Protects the Clan, hunts prey, trains apprentices, and follows the warrior code.</p>
+    </div>
+
+    <div class="card">
+      <h3>Apprentice</h3>
+      <p>A young cat training to become a warrior or medicine cat.</p>
+    </div>
+
+    <div class="card">
+      <h3>Elder</h3>
+      <p>A retired Clan cat respected for wisdom, stories, and experience.</p>
+    </div>
   </div>
 </section>
 
 <section id="books">
   <h2>Book Arcs</h2>
 
-  <div class="card">
-    <h3>The Prophecies Begin</h3>
-    <p>The first arc follows Rusty as he joins ThunderClan and becomes Firestar. It introduces the Clans, warrior code, and major conflicts.</p>
-  </div>
+  <div class="grid">
+    <div class="card">
+      <h3>The Prophecies Begin</h3>
+      <p>The first arc follows Rusty as he becomes Firepaw, Fireheart, and eventually Firestar.</p>
+    </div>
 
-  <div class="card">
-    <h3>The New Prophecy</h3>
-    <p>This arc follows a new generation of cats as the Clans face danger and must find a new home.</p>
-  </div>
+    <div class="card">
+      <h3>The New Prophecy</h3>
+      <p>A new generation of cats faces danger and the Clans must search for a new home.</p>
+    </div>
 
-  <div class="card">
-    <h3>Power of Three</h3>
-    <p>This arc focuses on three young cats with a mysterious prophecy surrounding them.</p>
-  </div>
+    <div class="card">
+      <h3>Power of Three</h3>
+      <p>Centers around three young cats connected to a mysterious prophecy.</p>
+    </div>
 
-  <div class="card">
-    <h3>Omen of the Stars</h3>
-    <p>This arc continues the prophecy storyline and includes a major battle involving the Dark Forest.</p>
-  </div>
+    <div class="card">
+      <h3>Omen of the Stars</h3>
+      <p>Continues the prophecy storyline and builds toward a major conflict with the Dark Forest.</p>
+    </div>
 
-  <div class="card">
-    <h3>Dawn of the Clans</h3>
-    <p>This arc goes back in time and explains how the warrior Clans first began.</p>
-  </div>
+    <div class="card">
+      <h3>Dawn of the Clans</h3>
+      <p>Explores how the original warrior Clans began.</p>
+    </div>
 
-  <div class="card">
-    <h3>A Vision of Shadows</h3>
-    <p>This arc introduces new challenges for the Clans and brings SkyClan back into the main story.</p>
+    <div class="card">
+      <h3>A Vision of Shadows</h3>
+      <p>Introduces new dangers and brings SkyClan back into the larger story.</p>
+    </div>
   </div>
 </section>
 
 <section id="terms">
-  <h2>Warrior Cats Terms</h2>
+  <h2>Warrior Terms</h2>
 
-  <div class="card">
-    <h3>Kittypet</h3>
-    <p>A house cat that lives with humans.</p>
-  </div>
+  <div class="grid">
+    <div class="card">
+      <h3>Kittypet</h3>
+      <p>A house cat that lives with humans.</p>
+    </div>
 
-  <div class="card">
-    <h3>Twolegs</h3>
-    <p>What Clan cats call humans.</p>
-  </div>
+    <div class="card">
+      <h3>Twolegs</h3>
+      <p>What Clan cats call humans.</p>
+    </div>
 
-  <div class="card">
-    <h3>Fresh-kill</h3>
-    <p>Food hunted by Clan cats, like mice, birds, fish, or rabbits.</p>
-  </div>
+    <div class="card">
+      <h3>Fresh-kill</h3>
+      <p>Prey hunted by Clan cats, such as mice, fish, birds, or rabbits.</p>
+    </div>
 
-  <div class="card">
-    <h3>Gathering</h3>
-    <p>A meeting where all Clans come together during a full moon.</p>
-  </div>
+    <div class="card">
+      <h3>Gathering</h3>
+      <p>A peaceful full-moon meeting where the Clans share news.</p>
+    </div>
 
-  <div class="card">
-    <h3>Warrior Code</h3>
-    <p>The rules Clan cats are expected to follow. It teaches loyalty, courage, and respect for the Clans.</p>
-  </div>
+    <div class="card">
+      <h3>Warrior Code</h3>
+      <p>The rules warriors are expected to follow.</p>
+    </div>
 
-  <div class="card">
-    <h3>Moonstone / Moonpool</h3>
-    <p>A sacred place where medicine cats and leaders communicate with StarClan.</p>
+    <div class="card">
+      <h3>Moonpool</h3>
+      <p>A sacred place where medicine cats and leaders communicate with StarClan.</p>
+    </div>
   </div>
 </section>
 
 <footer>
-  <p>Fan-made Warrior Cats info website</p>
+  <p>Fan-made guide. Not affiliated with the official Warrior Cats publishers or creators.</p>
 </footer>
 
+<script>
+  function searchCards() {
+    const input = document.getElementById("searchInput").value.toLowerCase();
+    const cards = document.querySelectorAll(".character-card");
 
-</body></html>
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      card.style.display = text.includes(input) ? "block" : "none";
+    });
+  }
+</script>
+
+</body>
+</html>
